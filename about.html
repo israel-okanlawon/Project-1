@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="A little about this bright new corner of the web.">
+  <title>About | Hello, world!</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow-x: hidden; color: #f7f7ff; background: #0b1020; }
+    body::before, body::after { content: ""; position: fixed; width: 44rem; height: 44rem; border-radius: 50%; filter: blur(100px); opacity: .28; pointer-events: none; z-index: -1; }
+    body::before { background: #7057ff; top: -24rem; left: -12rem; }
+    body::after { background: #18d7c1; bottom: -29rem; right: -12rem; }
+    .site-nav { position: fixed; top: 1.5rem; right: clamp(1rem, 4vw, 3rem); z-index: 2; display: flex; gap: .35rem; padding: .4rem; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; background: rgba(16,22,42,.72); backdrop-filter: blur(14px); }
+    .site-nav a { padding: .65rem 1rem; border-radius: 999px; color: #c4cce0; text-decoration: none; font-size: .88rem; font-weight: 600; transition: color .2s, background .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.11); }
+    main { position: relative; width: min(90vw, 760px); margin: 6.5rem auto 5rem; padding: clamp(2rem, 7vw, 5rem); border: 1px solid rgba(255,255,255,.14); border-radius: 32px; background: linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035)); box-shadow: 0 32px 100px rgba(0,0,0,.42); backdrop-filter: blur(18px); animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+    .orb { width: 64px; height: 64px; display: grid; place-items: center; margin-bottom: 1.6rem; border-radius: 22px; font-size: 1.8rem; background: linear-gradient(135deg, #9d8bff, #43e4d0); box-shadow: 0 10px 36px rgba(98,106,255,.4); }
+    .eyebrow { margin: 0 0 1rem; color: #a8b5d4; font-size: .76rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(3rem, 9vw, 5.6rem); line-height: .98; letter-spacing: -.075em; background: linear-gradient(100deg, #fff 15%, #c5c0ff 55%, #7ef1df); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .intro { margin: 1.5rem 0 2rem; color: #bac4dc; font-size: clamp(1rem, 2.5vw, 1.15rem); line-height: 1.8; }
+    .details { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .detail { padding: 1.2rem; border: 1px solid rgba(255,255,255,.1); border-radius: 18px; background: rgba(255,255,255,.04); }
+    .detail strong { display: block; margin-bottom: .45rem; color: #e9e7ff; }
+    .detail span { color: #aeb9d2; line-height: 1.6; }
+    .detail a { color: #7ef1df; text-decoration: none; }
+    .detail a:hover { text-decoration: underline; }
+    .back { display: inline-flex; align-items: center; gap: .5rem; margin-top: 2rem; color: #7ef1df; text-decoration: none; font-weight: 700; }
+    .back:hover { text-decoration: underline; }
+    footer { position: fixed; bottom: 1.5rem; color: #8490ab; font-size: .78rem; letter-spacing: .08em; }
+    @keyframes rise { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @media (max-width: 520px) { .site-nav { top: .8rem; right: 50%; transform: translateX(50%); } main { margin-top: 5.5rem; } footer { position: static; margin: 0 0 1rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
+  <main>
+    <div class="orb" aria-hidden="true">✦</div>
+    <p class="eyebrow">The story behind this page</p>
+    <h1>A little<br>about us.</h1>
+    <p class="intro">Every big adventure starts with a small hello. This little corner of the web is a place for ideas to take shape, curiosity to lead the way, and good things to get started.</p>
+    <div class="details">
+      <div class="detail"><strong>Curious by nature</strong><span>We believe the best ideas begin with a question and a willingness to explore.</span></div>
+      <div class="detail"><strong>Made for what’s next</strong><span>A simple starting point for projects, possibilities, and whatever comes after hello.</span></div>
+    </div>
+    <a class="back" href="index.html">← Back to the beginning</a>
+  </main>
+  <footer>MADE FOR THE NEXT BIG THING</footer>
+</body>
+</html>
